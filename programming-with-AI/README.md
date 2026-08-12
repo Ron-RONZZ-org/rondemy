@@ -44,9 +44,58 @@ Output lands in `_site/` (gitignored).
 
 ## Adding a chapter
 
-1. Create `chapters/<name>.qmd` (prose) or `chapters/<name>.ipynb` (code, with the `programming-with-ai` kernelspec).
-2. Add it to `_quarto.yml` → `website.sidebar.contents`.
-3. Verify with `quarto render`.
+Each chapter (or subchapter) is one file in `chapters/`, and the site navigation is generated **only** from `_quarto.yml` → `website.sidebar.contents`. Quarto does not scan the folder: a file that exists but is not listed in the sidebar still renders an HTML page, but it has no link from the site navigation (it becomes an orphan page). So every chapter requires **two** steps:
+
+1. **Create the file** — `chapters/<name>.qmd` (prose) or `chapters/<name>.ipynb` (code, with the `programming-with-ai` kernelspec, executed at render time).
+2. **Register it in the sidebar** — add it to `website.sidebar.contents` in `_quarto.yml`.
+
+Example — a flat chapter:
+
+```yaml
+website:
+  sidebar:
+    style: "docked"
+    contents:
+      - section: "Introduction"
+        contents:
+          - chapters/defining-ai.qmd
+```
+
+### Subchapters (chapters regrouping multiple qmd)
+
+Yes — subchapters are just nested sidebar sections. Each subchapter is its own `.qmd` file; a "chapter" is a `section` group containing them. Sections nest at any depth.
+
+```yaml
+website:
+  sidebar:
+    style: "docked"
+    contents:
+      - section: "Introduction"
+        contents:
+          - chapters/defining-ai.qmd
+
+      - section: "Prompting"
+        contents:
+          - section: "Basics"
+            contents:
+              - chapters/prompt-basics.qmd
+              - chapters/prompt-patterns.qmd
+          - section: "Advanced"
+            contents:
+              - chapters/prompt-advanced.qmd
+```
+
+This renders a sidebar with `Prompting → Basics → (Prompt Basics, Prompt Patterns)` and `Advanced → Prompt Advanced`. There is no depth limit.
+
+> **Sidebar vs. on-page TOC:** the sidebar (from `_quarto.yml`) expresses the chapter/subchapter hierarchy; the on-page TOC (from `format.html.toc: true`) lists the `##`/`###` headings *within* a single page. Both exist independently.
+
+### Verification
+
+```shell
+PATH=.venv/bin:$PATH quarto render
+```
+
+Then check in `_site/`: the sidebar lists the new chapter, search finds it, and for notebooks the code cells produced output.
 
 ## Agent instructions
 
