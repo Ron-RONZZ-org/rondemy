@@ -1,0 +1,20 @@
+- book: James
+- chapter: 2
+- theme: "discrimination, action, money, status"
+- lang: fr
+---
+- [texte biblique: Jacques 2](https://lire.la-bible.net/bible/LSG/JAS.2)
+
+## questions clés
+
+- Permet-elle la Bible la discrimination basée sur statut socio-économique ?
+- Pourquoi la Bible insiste que «la foi sans les œuvres est morte» ?
+
+## versets clés
+
+> 3Si, tournant vos regards vers celui qui porte l’habit magnifique, vous lui dites: Toi, assieds-toi ici à cette place d’honneur! Et si vous dites au pauvre: Toi, tiens-toi là debout! Ou bien: Assieds-toi au-dessous de mon marchepied! 4ne faites-vous pas en vous-mêmes une distinction, et ne jugez-vous pas sous l’inspiration de pensées mauvaises? 5Écoutez, mes frères bien-aimés: Dieu n’a-t-il pas choisi les pauvres aux yeux du monde, pour qu’ils soient riches en la foi, et héritiers du royaume qu’il a promis à ceux qui l’aiment? 6Et vous, vous avilissez le pauvre! Ne sont-ce pas les riches qui vous oppriment, et qui vous traînent devant les tribunaux? 7Ne sont-ce pas eux qui outragent le beau nom que vous portez? 8Si vous accomplissez la loi royale, selon l’Écriture: Tu aimeras ton prochain comme toi-même, vous faites bien. 9Mais si vous faites acception de personnes, vous commettez un péché, vous êtes condamnés par la loi comme des transgresseurs.
+
+> 26Comme le corps sans âme est mort, de même la foi sans les œuvres est morte.
+
+> 25Rahab la prostituée ne fut-elle pas également justifiée par les œuvres, lorsqu’elle reçut les messagers et qu’elle les fit partir par un autre chemin? 
+
