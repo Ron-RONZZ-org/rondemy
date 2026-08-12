@@ -1,0 +1,12 @@
+# Quarto build output
+_site/
+.quarto/
+
+# Quarkdown build output (legacy)
+quarkdown-output/
+
+# Python environment
+.venv/
+
+# Gortex tool state
+.gortex/

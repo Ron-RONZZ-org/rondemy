@@ -1,0 +1,11 @@
+---
+title: "Computer Programming with AI"
+author: "Rong Zhou"
+description: "Programming in the era of AI with help from LLM"
+---
+
+Welcome to this textbook on computer programming in the era of AI.
+
+## Introduction
+
+- [What is AI?](chapters/defining-ai.qmd)

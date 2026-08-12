@@ -1,0 +1,18 @@
+project:
+  type: website
+
+website:
+  title: "Computer Programming with AI"
+  description: "Programming in the era of AI with help from LLM"
+  search: true
+  sidebar:
+    style: "docked"
+    contents:
+      - section: "Introduction"
+        contents:
+          - chapters/defining-ai.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true

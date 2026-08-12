@@ -1,38 +1,39 @@
-# Defining AI
+---
+title: "Defining AI"
+---
 
 AI = artificial intelligence
 
-### Intelligence ?
-
+## Intelligence?
 
 > The faculty of understanding.
-- [Oxford dictionary](https://www.oed.com/dictionary/intelligence_n?tab=meaning_and_use#214347)
+> [Oxford dictionary](https://www.oed.com/dictionary/intelligence_n?tab=meaning_and_use#214347)
 
 > The ability to perceive or infer information and to retain it as knowledge to be applied to adaptive behaviors within an environment or context.
-- [Wikipedia](https://en.wikipedia.org/wiki/Intelligence)
+> [Wikipedia](https://en.wikipedia.org/wiki/Intelligence)
 
 > L'intelligence y implique la capacité à résoudre des problèmes ou à produire des biens ayant une valeur dans un contexte culturel ou collectif précis. (Intelligence is the capacity to solve problems or to produce value according to a cultural or communal context)
-- [Editions Retz](https://www.editions-retz.com/actualites/qu-est-ce-qu-une-intelligence.html)
+> [Editions Retz](https://www.editions-retz.com/actualites/qu-est-ce-qu-une-intelligence.html)
 
-#### Keywords
+### Keywords
 
 - understanding
 - ability to perceive and retain information
 - problem-solving capacity
 - value production
 
-### Artificial ?
+## Artificial?
 
 > AI is the study of how to make computers do things at which, at the moment, people are better.
-- Elaine Rich & Kevin Knight(1983)
+> Elaine Rich & Kevin Knight (1983)
 
 > Agents that receive percepts from the environment and perform actions.
-- Stuart Russell & Peter Norvig (1995)
+> Stuart Russell & Peter Norvig (1995)
 
 > Defining artificial intelligence (AI) is a persistent challenge, often muddied by technical ambiguity and varying interpretations. Commonly used definitions heavily emphasize technical properties of AI but neglect the human purpose of it...
-- [Johannes Dahlke (2026)](https://ar5iv.labs.arxiv.org/html/2410.13452)
+> [Johannes Dahlke (2026)](https://ar5iv.labs.arxiv.org/html/2410.13452)
 
-#### Keypoints
+### Keypoints
 
 - our AIs
   - computer programmes
