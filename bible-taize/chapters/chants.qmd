@@ -1,0 +1,17 @@
+---
+title: "Chants de Taizé"
+---
+
+Enregistrements de chants de Taizé (audio et vidéo).
+
+## Aber du weißt den Weg für mich
+
+<audio controls src="../chants/Aber du weißt den Weg für mich.mp3"></audio>
+
+- [Vidéo (mkv)](<../chants/Aber du weißt den Weg für mich.mkv>)
+- [Image animée (gif)](<../chants/Aber du weißt den Weg für mich.gif>)
+
+## Ô toi, l’au-delà de tout
+
+- [Vidéo (mkv)](<../chants/Ô toi, l’au-delà de tout.mkv>)
+- [Image animée (gif)](<../chants/Ô toi, l’au-delà de tout.gif>)

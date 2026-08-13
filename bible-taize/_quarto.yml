@@ -1,0 +1,26 @@
+project:
+  type: website
+
+website:
+  title: "Bible & Taizé"
+  description: "Chants, programmes et méditations bibliques de Taizé"
+  search: true
+  sidebar:
+    style: "docked"
+    contents:
+      - section: "Méditations bibliques"
+        contents:
+          - chapters/james-2.qmd
+
+      - section: "Chants"
+        contents:
+          - chapters/chants.qmd
+
+      - section: "Programmes"
+        contents:
+          - chapters/programmes.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true

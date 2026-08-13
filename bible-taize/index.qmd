@@ -1,0 +1,19 @@
+---
+title: "Bible & Taizé"
+author: "Rong Zhou"
+description: "Chants, programmes et méditations bibliques de Taizé"
+---
+
+Bienvenue sur ce recueil de ressources Taizé : chants, programmes de prière et méditations bibliques.
+
+## Méditations bibliques
+
+- [Jacques 2 — la foi sans les œuvres est morte](chapters/james-2.qmd)
+
+## Chants
+
+- [Chants de Taizé](chapters/chants.qmd) — enregistrements audio et vidéo
+
+## Programmes
+
+- [Programmes de prière](chapters/programmes.qmd) — feuilles PDF

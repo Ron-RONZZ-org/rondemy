@@ -19,7 +19,7 @@ Context resolution order (highest priority first):
 **rondemy** is a personal collection of educational projects. It currently hosts:
 
 - **`programming-with-AI/`** — a web-first textbook on computer programming in the era of AI, built with [Quarto](https://quarto.org). Prose chapters are `.qmd`; code chapters are executable `.ipynb` notebooks. See `programming-with-AI/AGENTS.md`.
-- **`bible-taize/`** — media and resources for Taizé chants and programmes (PDFs, audio/video). No build system; content files only.
+- **`bible-taize/`** — media and resources for Taizé chants and programmes (PDFs, audio/video), plus Bible meditation notes, built with [Quarto](https://quarto.org) (website project). See `bible-taize/AGENTS.md`.
 
 The two projects are independent: no shared code, dependencies, or tooling.
 
@@ -38,7 +38,7 @@ The two projects are independent: no shared code, dependencies, or tooling.
 | Project | Tooling |
 |---|---|
 | `programming-with-AI` | Quarto 1.6.42 (website project), Python 3.12/3.13 via `uv`, Jupyter (`.venv`) |
-| `bible-taize` | None (media files) |
+| `bible-taize` | Quarto 1.6.42 (website project) |
 
 ## Dependency management
 
@@ -74,12 +74,13 @@ Use [Conventional Commits](https://www.conventionalcommits.org/):
 
 ## Testing Requirements
 
-This repo contains no automated tests: `programming-with-AI` is a static documentation site and `bible-taize` is media content.
+This repo contains no automated tests: both `programming-with-AI` and `bible-taize` are static Quarto sites.
 
 Verification substitutes:
-- **Build check**: `quarto render` must succeed with no errors before committing changes to `programming-with-AI`.
+- **Build check**: `quarto render` must succeed with no errors before committing changes to `programming-with-AI` or `bible-taize`.
 - **Notebook execution**: run `quarto render --execute` on any changed notebook chapter to confirm cells run.
 - Manual visual check of `_site/` (sidebar links, search, headings) for layout-sensitive changes.
+- For `bible-taize`: media passthrough — confirm `chants/` and `programmes/` files land in `_site/` and their links (`../chants/...`, `../programmes/...`) resolve.
 
 ---
 
@@ -96,7 +97,7 @@ Verification substitutes:
 | Module | AGENTS File | Build/Preview |
 |---|---|---|
 | `programming-with-AI` | `programming-with-AI/AGENTS.md` | `quarto render` / `quarto preview` |
-| `bible-taize` | *(none — content only)* | n/a |
+| `bible-taize` | `bible-taize/AGENTS.md` | `quarto render` / `quarto preview` |
 
 (Update this table as new modules are added)
 
@@ -108,7 +109,7 @@ Verification substitutes:
 Root AGENTS.md (global rules)
     │
     ├── programming-with-AI/AGENTS.md (local rules, override root)
-    └── bible-taize/ (no AGENTS.md — root rules apply)
+    └── bible-taize/AGENTS.md (local rules, override root)
 ```
 
 Local rules override global rules. Module-level files focus on domain-specific behavior, constraints, and invariants.

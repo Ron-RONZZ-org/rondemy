@@ -1,2 +1,8 @@
+# Quarto build output
+_site/
+.quarto/
+
 # Process output logs (can reappear when scripts run)
 nohup.out
+
+/.quarto/

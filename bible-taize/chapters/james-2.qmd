@@ -1,9 +1,12 @@
-- book: James
-- chapter: 2
-- theme: "discrimination, action, money, status"
-- lang: fr
 ---
-- [texte biblique: Jacques 2](https://lire.la-bible.net/bible/LSG/JAS.2)
+title: "Jacques 2 — la foi sans les œuvres est morte"
+book: James
+chapter: 2
+theme: "discrimination, action, money, status"
+lang: fr
+---
+
+[texte biblique: Jacques 2](https://lire.la-bible.net/bible/LSG/JAS.2)
 
 ## questions clés
 
@@ -16,5 +19,4 @@
 
 > 26Comme le corps sans âme est mort, de même la foi sans les œuvres est morte.
 
-> 25Rahab la prostituée ne fut-elle pas également justifiée par les œuvres, lorsqu’elle reçut les messagers et qu’elle les fit partir par un autre chemin? 
-
+> 25Rahab la prostituée ne fut-elle pas également justifiée par les œuvres, lorsqu’elle reçut les messagers et qu’elle les fit partir par un autre chemin?
