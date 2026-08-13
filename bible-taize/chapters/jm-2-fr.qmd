@@ -2,7 +2,7 @@
 title: "Jacques 2 — la foi sans les œuvres est morte"
 book: James
 chapter: 2
-theme: "discrimination, action, money, status"
+theme: "discrimination, action, argent, statut"
 lang: fr
 ---
 

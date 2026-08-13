@@ -10,15 +10,13 @@ website:
     contents:
       - section: "Méditations bibliques"
         contents:
-          - chapters/james-2.qmd
+          - chapters/programmes.qmd
+          - chapters/jm-2-fr.qmd
+          - chapters/ps-34-fr.qmd
 
       - section: "Chants"
         contents:
           - chapters/chants.qmd
-
-      - section: "Programmes"
-        contents:
-          - chapters/programmes.qmd
 
 format:
   html:

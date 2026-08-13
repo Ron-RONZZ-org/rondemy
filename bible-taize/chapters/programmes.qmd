@@ -1,8 +1,8 @@
 ---
-title: "Programmes de prière"
+title: "Programmes de la lecture biblique"
 ---
 
-Feuilles de programme des rencontres (PDF).
+Feuilles de programme de la lecture biblique Taizé en PDF.
 
 - [Programme — juillet 2026](../programmes/fr-2026-07-l.pdf)
 - [Programme — août 2026](../programmes/fr-2026-08-l.pdf)
