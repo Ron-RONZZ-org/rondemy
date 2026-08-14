@@ -38,5 +38,6 @@ A web-first textbook on computer programming in the era of AI, built with Quarto
   1. `PATH=.venv/bin:$PATH quarto render` — must succeed with no errors.
   2. For changed notebooks: `PATH=.venv/bin:$PATH quarto render chapters/<name>.ipynb --execute` — cells must run and outputs appear.
   3. Visual check of `_site/`: sidebar lists all chapters, search works, headings render.
+- **CI publishing**: on push to `main`, `.github/workflows/publish.yml` renders this project (with Jupyter installed and the `programming-with-ai` kernel registered) and deploys it to GitHub Pages at `https://ron-ronzz-org.github.io/rondemy/programming-with-AI/`.
 - **Citation content is sacred**: preserve quotes and source links verbatim (mixed English/French is intentional).
 - **Python environment**: only install packages needed to execute notebook chapters; prefer stdlib/well-known libraries.

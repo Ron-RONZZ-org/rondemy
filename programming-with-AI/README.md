@@ -97,6 +97,10 @@ PATH=.venv/bin:$PATH quarto render
 
 Then check in `_site/`: the sidebar lists the new chapter, search finds it, and for notebooks the code cells produced output.
 
+## Deployment
+
+Published automatically by the repo CI ([`.github/workflows/publish.yml`](../.github/workflows/publish.yml)) on push to `main`: <https://ron-ronzz-org.github.io/rondemy/programming-with-AI/>. The CI installs Jupyter and renders with the `programming-with-ai` kernel, so notebook chapters execute on every deploy.
+
 ## Agent instructions
 
 See `AGENTS.md` in this directory and the [root `AGENTS.md`](../AGENTS.md).

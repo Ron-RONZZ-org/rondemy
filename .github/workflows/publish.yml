@@ -1,0 +1,77 @@
+name: Publish to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Required for GitHub Pages deployment via actions/deploy-pages.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Only one deployment in flight at a time; cancel superseded runs.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: 1.6.42
+
+      # Jupyter is required to execute .ipynb code chapters at render time
+      # (see programming-with-AI/AGENTS.md). The kernel is registered under
+      # the name the notebooks declare in their kernelspec.
+      - name: Setup Python and Jupyter
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Jupyter and register kernel
+        run: |
+          pip install jupyter
+          python -m ipykernel install --user --name programming-with-ai
+
+      - name: Render programming-with-AI
+        working-directory: programming-with-AI
+        run: quarto render
+
+      - name: Render bible-taize
+        working-directory: bible-taize
+        run: quarto render
+
+      # GitHub Pages serves one site per repo, so both rendered sites are
+      # combined into a single artifact at subpaths:
+      #   /rondemy/programming-with-AI/ and /rondemy/bible-taize/
+      # The landing page at the artifact root is generated from whatever
+      # subfolders exist, so future projects are picked up automatically.
+      - name: Assemble artifact and generate landing page
+        run: |
+          mkdir -p public
+          cp -r programming-with-AI/_site public/programming-with-AI
+          cp -r bible-taize/_site public/bible-taize
+          python .github/scripts/generate-pages-index.py public
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -48,6 +48,10 @@ Drop files into `chants/` or `programmes/`, then add links on the corresponding 
 [mp3](<../chants/Aber du weißt den Weg für mich.mp3>)
 ```
 
+## Deployment
+
+Published automatically by the repo CI ([`.github/workflows/publish.yml`](../.github/workflows/publish.yml)) on push to `main`: <https://ron-ronzz-org.github.io/rondemy/bible-taize/>.
+
 ## Agent instructions
 
 See `AGENTS.md` in this directory and the [root `AGENTS.md`](../AGENTS.md).

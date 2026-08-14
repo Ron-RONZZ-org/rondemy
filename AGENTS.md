@@ -39,6 +39,7 @@ The two projects are independent: no shared code, dependencies, or tooling.
 |---|---|
 | `programming-with-AI` | Quarto 1.6.42 (website project), Python 3.12/3.13 via `uv`, Jupyter (`.venv`) |
 | `bible-taize` | Quarto 1.6.42 (website project) |
+| CI / deployment | GitHub Actions (`.github/workflows/publish.yml`) → GitHub Pages (subpaths of `https://ron-ronzz-org.github.io/rondemy/`) |
 
 ## Dependency management
 
@@ -77,7 +78,8 @@ Use [Conventional Commits](https://www.conventionalcommits.org/):
 This repo contains no automated tests: both `programming-with-AI` and `bible-taize` are static Quarto sites.
 
 Verification substitutes:
-- **Build check**: `quarto render` must succeed with no errors before committing changes to `programming-with-AI` or `bible-taize`.
+- **CI build check**: `.github/workflows/publish.yml` renders both sites (with Jupyter for notebook chapters) and deploys to GitHub Pages on every push to `main`. CI is the authoritative build check; a failed run keeps the previous published site live.
+- **Build check (local)**: `quarto render` must succeed with no errors before committing changes to `programming-with-AI` or `bible-taize`.
 - **Notebook execution**: run `quarto render --execute` on any changed notebook chapter to confirm cells run.
 - Manual visual check of `_site/` (sidebar links, search, headings) for layout-sensitive changes.
 - For `bible-taize`: media passthrough — confirm `chants/` and `programmes/` files land in `_site/` and their links (`../chants/...`, `../programmes/...`) resolve.

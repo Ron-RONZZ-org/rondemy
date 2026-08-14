@@ -32,3 +32,4 @@ Media and resources for Taizé chants and prayer programmes, plus Bible meditati
 - **Adding a page**: create `chapters/<name>.qmd` with YAML frontmatter (`title:`), then add it to the sidebar in `_quarto.yml`.
 - **Adding media**: drop files into `chants/` or `programmes/`, then add links on the corresponding chapter page.
 - **Verification before commit**: `quarto render` must succeed with no errors; then check `_site/` — sidebar lists all pages, media links resolve (`../chants/...`), and audio players load.
+- **CI publishing**: on push to `main`, `.github/workflows/publish.yml` renders this project and deploys it to GitHub Pages at `https://ron-ronzz-org.github.io/rondemy/bible-taize/`.
