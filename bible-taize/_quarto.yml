@@ -11,8 +11,15 @@ website:
       - section: "Méditations bibliques"
         contents:
           - chapters/programmes.qmd
-          - chapters/jm-2-fr.qmd
-          - chapters/ps-34-fr.qmd
+          - section: "Juillet 2026"
+            contents:
+              - chapters/jas-2-fr.qmd
+              - chapters/psa-34-fr.qmd
+              - chapters/jhn-20-fr.qmd
+              - chapters/jhn-10-fr.qmd
+              - chapters/jas-1-fr.qmd
+              - chapters/mat-11-fr.qmd
+              - chapters/luk-6-fr.qmd
 
       - section: "Chants"
         contents:

@@ -4,7 +4,7 @@ Media and resources for Taizé chants and prayer programmes, plus Bible meditati
 
 - **Chants** — recordings of Taizé chants (`chants/`: `.mp3`, `.mkv`, `.gif`), listed on `chapters/chants.qmd`.
 - **Programmes** — prayer programme sheets (`programmes/`: `.pdf`), listed on `chapters/programmes.qmd`.
-- **Méditations bibliques** — Bible meditation notes in French (e.g. `chapters/james-2.qmd`).
+- **Méditations bibliques** — Bible meditation notes in French (e.g. `chapters/jas-2-fr.qmd`).
 - Rendered output is a static site in `_site/` with sidebar navigation and search.
 
 ## Structure
@@ -14,7 +14,7 @@ bible-taize/
 ├── _quarto.yml            # site config: title, sidebar, search, theme
 ├── index.qmd              # home page
 ├── chapters/              # content pages (.qmd)
-│   ├── james-2.qmd        # Bible meditation: Jacques 2
+│   ├── jas-2-fr.qmd       # Bible meditation: Jacques 2
 │   ├── chants.qmd         # chant recordings index
 │   └── programmes.qmd     # programme PDFs index
 ├── chants/                # chant media files (passthrough to _site/)

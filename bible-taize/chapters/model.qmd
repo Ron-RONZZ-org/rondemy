@@ -1,8 +1,8 @@
 ---
-title: "
-book: 
-chapter: 
-theme: "
+title: "Titre du chapitre"
+book: ""
+chapter: ""
+theme: "Thème du chapitre"
 lang: fr
 ---
 

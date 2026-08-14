@@ -8,7 +8,7 @@ Bienvenue sur ce recueil de ressources Taizé : chants, programmes de prière et
 
 ## Méditations bibliques
 
-- [Jacques 2 — la foi sans les œuvres est morte](chapters/james-2.qmd)
+- [Jacques 2 — la foi sans les œuvres est morte](chapters/jas-2-fr.qmd)
 
 ## Chants
 

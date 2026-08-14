@@ -1,5 +1,5 @@
 ---
-title: "Jacques 1: Le bonheur de persévérer dans la foi
+title: "Jacques 1: Le bonheur de persévérer dans la foi"
 book: James
 chapter: 1
 theme: "persévérance, épreuve, péché"
@@ -26,6 +26,6 @@ lang: fr
   - Blâme-tu Dieu pour ces épreuves ?
   - Sens-tu avoir gagné de « la patience » à travers de cettes expériences ?
 - Selon Jacques 1, quelle est la source des mauvaises tentations ? Est-tu d'accord ?
-- Comment comprend-tu
+- Comment comprends-tu
   - « car la colère des personnes n'accomplit pas la justice de Dieu » (1:19)?
   - le « faux raisonnement » mentionné en verset 22 ?
