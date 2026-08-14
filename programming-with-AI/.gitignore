@@ -10,3 +10,5 @@ quarkdown-output/
 
 # Gortex tool state
 .gortex/
+
+/.quarto/

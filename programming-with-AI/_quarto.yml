@@ -8,9 +8,10 @@ website:
   sidebar:
     style: "docked"
     contents:
-      - section: "Introduction"
+      - section: "Introduction to artificial intelligence"
         contents:
           - chapters/defining-ai.qmd
+          - chapters/ANN.qmd
 
 format:
   html:

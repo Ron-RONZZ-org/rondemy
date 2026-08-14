@@ -33,7 +33,7 @@ AI = artificial intelligence
 > Defining artificial intelligence (AI) is a persistent challenge, often muddied by technical ambiguity and varying interpretations. Commonly used definitions heavily emphasize technical properties of AI but neglect the human purpose of it...
 > [Johannes Dahlke (2026)](https://ar5iv.labs.arxiv.org/html/2410.13452)
 
-### Keypoints
+## Summary
 
 - our AIs
   - computer programmes
