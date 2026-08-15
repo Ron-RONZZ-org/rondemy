@@ -20,6 +20,7 @@ website:
               - chapters/jas-1-fr.qmd
               - chapters/mat-11-fr.qmd
               - chapters/luk-6-fr.qmd
+              - chapters/sir-7-fr.qmd
 
       - section: "Chants"
         contents:
