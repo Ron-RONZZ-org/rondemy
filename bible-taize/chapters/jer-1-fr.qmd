@@ -1,8 +1,8 @@
 ---
-title: "Jérémie 1:"
+title: "Jérémie 1: les portraits bibliques de Dieu"
 book: "Jeremiah"
 chapter: "1"
-theme: ""
+theme: "justice divine, prophète, portrait biblique de Dieu"
 lang: fr
 ---
 

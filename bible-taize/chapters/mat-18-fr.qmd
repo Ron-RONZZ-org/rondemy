@@ -1,5 +1,5 @@
 ---
-title: "Matthieu 18: "
+title: "Matthieu 18: pardonner de tout ton cœur"
 book: "Matthiew"
 chapter: "18"
 theme: "humilité, fraternité, péché, réconciliation, pardon"
