@@ -21,6 +21,9 @@ website:
               - chapters/mat-11-fr.qmd
               - chapters/luk-6-fr.qmd
               - chapters/sir-7-fr.qmd
+              - chapters/mat-18-fr.qmd
+              - chapters/eph-2-fr.qmd
+              - chapters/jer-1-fr.qmd
 
       - section: "Chants"
         contents:
