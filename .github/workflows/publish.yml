@@ -59,6 +59,9 @@ jobs:
           cp -r programming-with-AI/_site public/programming-with-AI
           cp -r bible-taize/_site public/bible-taize
           python .github/scripts/generate-pages-index.py public
+          # GitHub Pages auto-detects CNAME in the artifact root and enforces
+          # the custom domain on every deploy.
+          echo "rondemy.ronzz.org" > public/CNAME
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
