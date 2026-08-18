@@ -4,7 +4,7 @@
 # Creates <name>/ containing everything a new sub-project needs:
 #   _quarto.yml      site config with navbar home button, search, docked sidebar
 #   index.qmd        home page
-#   chapters/        first page (home.qmd)
+#   chapters/        home.qmd plus a chapter-template.qmd reference page
 #   README.md        build/preview instructions
 #   AGENTS.md        module agent instructions
 #   .gitignore       ignores Quarto build output
@@ -114,6 +114,7 @@ website:
       - chapters/home.qmd
       - section: \"Content\"
         contents:
+          - chapters/chapter-template.qmd
 
 format:
   html:
@@ -137,6 +138,83 @@ title: \"Home\"
 Welcome. Add an overview here; put detailed chapters under the \"Content\"
 section in the sidebar (\`_quarto.yml\` → \`website.sidebar.contents\`).
 "
+
+# chapter-template.qmd is a living reference showing the .qmd format. It is
+# written with a quoted heredoc so backticks, quotes and $ are taken literally.
+chapter_template=$(cat <<'EOF'
+---
+title: "Chapter Template"
+description: "A worked example of the .qmd format: frontmatter options, prose, lists, tables, code blocks and callouts."
+author: "Rong Zhou"
+date: today
+lang: en
+categories:
+  - reference
+  - template
+tags:
+  - quarto
+  - markdown
+toc: true
+format:
+  html:
+    toc: true
+    code-fold: true
+---
+
+This file is a living template for writing chapters. Copy it to `chapters/<slug>.qmd`, then add it to the sidebar in `_quarto.yml`. It shows the main pieces of the `.qmd` format.
+
+## Frontmatter
+
+The block between the `---` lines at the top is YAML frontmatter. It sets page metadata (`title`, `author`, `date`, `lang`, `categories`, `tags`) and per-page format options (here `toc` and collapsible code blocks via `code-fold`). Anything set in the project's `_quarto.yml` is inherited unless overridden here.
+
+## Prose
+
+Write Markdown normally: **bold**, *italic*, `inline code`, and links like [Quarto websites](https://quarto.org/docs/websites/).
+
+### Sub-heading
+
+Headings become entries in the table of contents (`toc: true`). Use `##` for major sections and `###` for sub-sections.
+
+## Lists
+
+- unordered item
+- another item
+  - a nested item
+
+1. ordered item
+2. second ordered item
+
+## Blockquote
+
+> A blockquote is useful for citations or highlighted passages. Preserve quotes and source links verbatim.
+
+## Table
+
+| Feature | Purpose |
+|---|---|
+| Prose | body text |
+| Code block | runnable or illustrative code |
+| Callout | emphasize a note or warning |
+
+## Code block
+
+```python
+def greet(name: str) -> str:
+    return f"Hello, {name}!"
+
+print(greet("Quarto"))
+```
+
+Because `code-fold: true` is set in the frontmatter, this code block is collapsible in the rendered page.
+
+## Callout
+
+::: {.callout-note}
+This is a Quarto callout. Use `{.callout-note}`, `{.callout-tip}`, `{.callout-warning}`, or `{.callout-important}`.
+:::
+EOF
+)
+write_file "$NAME/chapters/chapter-template.qmd" "$chapter_template"
 
 write_file "$NAME/README.md" "# $TITLE
 
