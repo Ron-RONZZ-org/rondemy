@@ -40,24 +40,31 @@ jobs:
           pip install jupyter
           python -m ipykernel install --user --name programming-with-ai
 
-      - name: Render programming-with-AI
-        working-directory: programming-with-AI
-        run: quarto render
+      # Projects are discovered automatically: every top-level directory with
+      # a _quarto.yml is a Quarto website project and is rendered in place.
+      # Adding a new project requires no workflow change (see scripts/new-project.sh).
+      - name: Render projects
+        run: |
+          for dir in */; do
+            [ -f "$dir/_quarto.yml" ] || continue
+            echo "==> Rendering ${dir%/}"
+            (cd "$dir" && quarto render)
+          done
 
-      - name: Render bible-taize
-        working-directory: bible-taize
-        run: quarto render
-
-      # GitHub Pages serves one site per repo, so both rendered sites are
-      # combined into a single artifact at subpaths:
-      #   /rondemy/programming-with-AI/ and /rondemy/bible-taize/
+      # GitHub Pages serves one site per repo, so each rendered site is copied
+      # into the artifact at a subpath:
+      #   https://rondemy.ronzz.org/<project>/
       # The landing page at the artifact root is generated from whatever
       # subfolders exist, so future projects are picked up automatically.
       - name: Assemble artifact and generate landing page
         run: |
           mkdir -p public
-          cp -r programming-with-AI/_site public/programming-with-AI
-          cp -r bible-taize/_site public/bible-taize
+          for dir in */; do
+            [ -f "$dir/_quarto.yml" ] || continue
+            name="${dir%/}"
+            echo "==> Copying $name"
+            cp -r "$name/_site" "public/$name"
+          done
           python .github/scripts/generate-pages-index.py public
           # GitHub Pages auto-detects CNAME in the artifact root and enforces
           # the custom domain on every deploy.
