@@ -8,7 +8,7 @@ website:
   navbar:
     right:
       - icon: house-fill
-        href: https://ron-ronzz-org.github.io/rondemy/
+        href: https://rondemy.ronzz.org/
         text: "rondemy home"
   sidebar:
     style: "docked"
