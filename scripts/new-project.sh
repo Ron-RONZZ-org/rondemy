@@ -212,10 +212,21 @@ update_readme() {
     echo "  README.md: '$NAME' already listed"
     return
   fi
+
+  # Locate the Projects table by its header row, then take the LAST row of that
+  # table only. A Markdown table is contiguous: every row starts with '|' and
+  # the table ends at the first non-'|' line. Scoping to the header keeps us
+  # safe even if other tables are added later in the file.
   local last_line
-  last_line="$(grep -n '^| \[' README.md | tail -1 | cut -d: -f1)"
+  last_line="$(awk '
+    /^\| *Project *\| *Description *\| *Build *\|/ { hdr = NR }
+    hdr && /^\|/ { last = NR }
+    hdr && !/^\|/ && last { exit }
+    END { print last }
+  ' README.md)"
+
   if [ -z "$last_line" ]; then
-    echo "  warning: no project rows found in README.md — add '$NAME' to the Projects table manually" >&2
+    echo "  warning: no Projects table found in README.md — add '$NAME' to the Projects table manually" >&2
     return
   fi
   if [ "$DRY_RUN" -eq 1 ]; then
