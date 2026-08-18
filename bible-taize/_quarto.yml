@@ -5,6 +5,11 @@ website:
   title: "Bible & Taizé"
   description: "Chants, programmes et méditations bibliques de Taizé"
   search: true
+  navbar:
+    right:
+      - icon: house-fill
+        href: https://ron-ronzz-org.github.io/rondemy/
+        text: "rondemy home"
   sidebar:
     style: "docked"
     contents:
