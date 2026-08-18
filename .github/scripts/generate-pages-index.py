@@ -76,7 +76,7 @@ def main() -> int:
 <body>
   <main>
     <h1>rondemy</h1>
-    <p class="subtitle">Personal collection of educational projects</p>
+    <p class="subtitle">Central hub for public learning material at ronzz.org</p>
     <div class="cards">
 {cards}
     </div>
