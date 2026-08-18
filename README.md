@@ -27,7 +27,7 @@ Scaffold a new Quarto website project with:
 scripts/new-project.sh <name> --title "..." --description "..."
 ```
 
-This creates `<name>/` with the standard site config (navbar home button back to `https://rondemy.ronzz.org/`, search, docked sidebar), a home page, a first chapter, plus `README.md` and `AGENTS.md`. CI discovers projects automatically — any top-level directory with a `_quarto.yml` is rendered and published — so no workflow or landing-page edits are needed; the next push to `main` publishes the site at `https://rondemy.ronzz.org/<name>/`. Use `--dry-run` to preview, and add the project to the table above.
+This creates `<name>/` with the standard site config (navbar home button back to `https://rondemy.ronzz.org/`, search, docked sidebar), a home page, a first page (`chapters/home.qmd`), plus `README.md` and `AGENTS.md`, and adds the project to the table above. CI discovers projects automatically — any top-level directory with a `_quarto.yml` is rendered and published — so no workflow or landing-page edits are needed; the next push to `main` publishes the site at `https://rondemy.ronzz.org/<name>/`. Use `--dry-run` to preview.
 
 ## Agent instructions
 

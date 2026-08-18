@@ -4,11 +4,12 @@
 # Creates <name>/ containing everything a new sub-project needs:
 #   _quarto.yml      site config with navbar home button, search, docked sidebar
 #   index.qmd        home page
-#   chapters/        first chapter (introduction.qmd)
+#   chapters/        first page (home.qmd)
 #   README.md        build/preview instructions
 #   AGENTS.md        module agent instructions
 #   .gitignore       ignores Quarto build output
 #
+# It also adds the project to the root README.md Projects table.
 # CI discovers projects automatically (any top-level dir with _quarto.yml),
 # so no workflow or landing-page edits are needed. The site will be published
 # at https://rondemy.ronzz.org/<name>/ on the next push to main.
@@ -110,9 +111,9 @@ website:
   sidebar:
     style: \"docked\"
     contents:
+      - chapters/home.qmd
       - section: \"Content\"
         contents:
-          - chapters/introduction.qmd
 
 format:
   html:
@@ -129,12 +130,12 @@ description: \"$DESCRIPTION\"
 Welcome to $TITLE.
 "
 
-write_file "$NAME/chapters/introduction.qmd" "---
-title: \"Introduction\"
+write_file "$NAME/chapters/home.qmd" "---
+title: \"Home\"
 ---
 
-Start writing here. Every chapter must be listed in \`_quarto.yml\` under
-\`website.sidebar.contents\`.
+Welcome. Add an overview here; put detailed chapters under the \"Content\"
+section in the sidebar (\`_quarto.yml\` → \`website.sidebar.contents\`).
 "
 
 write_file "$NAME/README.md" "# $TITLE
@@ -202,6 +203,31 @@ _site/
 /.quarto/
 "
 
+# --- root README ----------------------------------------------------------
+
+update_readme() {
+  # Add the new project as a row in the root README Projects table.
+  local row="| [$NAME]($NAME/) | $DESCRIPTION | \`quarto render\` |"
+  if grep -q "^| \[$NAME\]($NAME/)" README.md; then
+    echo "  README.md: '$NAME' already listed"
+    return
+  fi
+  local last_line
+  last_line="$(grep -n '^| \[' README.md | tail -1 | cut -d: -f1)"
+  if [ -z "$last_line" ]; then
+    echo "  warning: no project rows found in README.md — add '$NAME' to the Projects table manually" >&2
+    return
+  fi
+  if [ "$DRY_RUN" -eq 1 ]; then
+    echo "  would update README.md: $row"
+    return
+  fi
+  sed -i "${last_line}a $row" README.md
+  echo "  updated README.md (added '$NAME' to the Projects table)"
+}
+
+update_readme
+
 # --- summary --------------------------------------------------------------
 
 echo
@@ -210,6 +236,5 @@ if [ "$DRY_RUN" -eq 1 ]; then
 else
   echo "Done. Next steps:"
   echo "  cd $NAME && quarto render   # verify the skeleton builds"
-  echo "  Add '$NAME' to the project table in the root README.md"
   echo "  Commit and push — CI publishes to https://rondemy.ronzz.org/$NAME/"
 fi
