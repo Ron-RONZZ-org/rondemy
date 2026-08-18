@@ -1,0 +1,24 @@
+project:
+  type: website
+
+website:
+  title: "Bien vivre en France"
+  description: "Un guide pratique pour des personnes immigrées vivant en France"
+  search: true
+  navbar:
+    right:
+      - icon: house-fill
+        href: https://rondemy.ronzz.org/
+        text: "rondemy home"
+  sidebar:
+    style: "docked"
+    contents:
+      - chapters/home.qmd
+      - section: "Content"
+        contents:
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+

@@ -1,0 +1,6 @@
+---
+title: "Home"
+---
+
+Welcome. Add an overview here; put detailed chapters under the "Content"
+section in the sidebar (`_quarto.yml` → `website.sidebar.contents`).

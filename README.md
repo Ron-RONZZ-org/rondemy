@@ -8,6 +8,7 @@ A personal collection of educational projects.
 |---|---|---|
 | [programming-with-AI](programming-with-AI/) | Web-first textbook on programming in the era of AI (Quarto + Jupyter notebooks) | `quarto render` |
 | [bible-taize](bible-taize/) | Taizé chants and programmes (PDFs, audio/video) | `quarto render` |
+| [vie-en-france](vie-en-france/) | Un guide pratique pour des personnes immigrées vivant en France | `quarto render` |
 
 ## Deployment
 
