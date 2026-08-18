@@ -57,6 +57,7 @@ The two projects are independent: no shared code, dependencies, or tooling.
 2. **Every chapter must be listed in the sidebar** — add it to the `sidebar.contents` of `_quarto.yml` (unlisted pages are not part of the published site).
 3. **YAML frontmatter only in Quarto files** (`---` blocks with `title:`, `author:`, etc.). Quarkdown function-call syntax (`.docname`, `.include {docs}`) is legacy — do not reintroduce it.
 4. **Preserve citations verbatim** — quotes and their source links (Oxford dictionary, Wikipedia, arXiv) are textbook content, not lintable prose.
+5. **New projects: use `scripts/new-project.sh`** — it scaffolds a module with the standard `_quarto.yml` (navbar home button to `https://rondemy.ronzz.org/`, search, docked sidebar), `index.qmd`, `chapters/`, `README.md` and `AGENTS.md`. CI auto-discovers projects (any top-level dir with `_quarto.yml`), so no workflow or landing-page edits are needed.
 
 ## Documentation Standards
 

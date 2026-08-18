@@ -19,6 +19,16 @@ A GitHub Actions workflow ([`.github/workflows/publish.yml`](.github/workflows/p
 
 GitHub Pages serves one site per repo, so both projects live at subpaths. The landing page is regenerated on each deploy and picks up new project folders automatically. A manual re-publish is available under **Actions → Publish to GitHub Pages → Run workflow**.
 
+## Adding a new project
+
+Scaffold a new Quarto website project with:
+
+```shell
+scripts/new-project.sh <name> --title "..." --description "..."
+```
+
+This creates `<name>/` with the standard site config (navbar home button back to `https://rondemy.ronzz.org/`, search, docked sidebar), a home page, a first chapter, plus `README.md` and `AGENTS.md`. CI discovers projects automatically — any top-level directory with a `_quarto.yml` is rendered and published — so no workflow or landing-page edits are needed; the next push to `main` publishes the site at `https://rondemy.ronzz.org/<name>/`. Use `--dry-run` to preview, and add the project to the table above.
+
 ## Agent instructions
 
 See `AGENTS.md` at the repo root and in each project directory.
