@@ -30,6 +30,7 @@ website:
               - chapters/eph-2-fr.qmd
               - chapters/jer-1-fr.qmd
               - chapters/mat-13-fr.qmd
+              - chapters/sir-4-fr.qmd
 
       - section: "Chants"
         contents:
